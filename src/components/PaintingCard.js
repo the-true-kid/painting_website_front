@@ -9,8 +9,8 @@ const PaintingCard = ({ painting }) => {
                 <CardMedia
                     component="img"
                     height="200"
-                    image={`http://localhost:5000/static${painting.pictures[0].picture_url}`}
-                    alt={painting.pictures[0].alt_text}
+                    image={`http://localhost:5000${painting.picture_url}`} // Use picture_url directly
+                    alt={painting.alt_text || 'No image available'} // Use alt_text or fallback
                     sx={{ objectFit: 'cover', objectPosition: 'center' }}
                 />
             </Link>

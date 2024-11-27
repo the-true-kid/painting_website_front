@@ -41,8 +41,8 @@ const PaintingDetail = () => {
                 {/* Display the main image */}
                 <CardMedia
                     component="img"
-                    image={`http://localhost:5000/static${painting.pictures[0].picture_url}`}
-                    alt={painting.pictures[0].alt_text}
+                    image={`http://localhost:5000${painting.picture_url}`} // Directly use picture_url
+                    alt={painting.alt_text || 'No image available'} // Use alt_text or a fallback
                     sx={{ maxWidth: '100%', borderRadius: '8px', marginBottom: '2rem' }}
                 />
 

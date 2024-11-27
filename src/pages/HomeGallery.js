@@ -8,7 +8,7 @@ function HomeGallery() {
     const [paintings, setPaintings] = useState([]);
 
     useEffect(() => {
-        // Fetch all paintings without toggling logic
+        // Fetch all paintings
         axios.get('http://localhost:5000/api/paintings')
             .then(response => {
                 setPaintings(response.data);
